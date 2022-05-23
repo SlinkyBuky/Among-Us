@@ -270,10 +270,9 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
                 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
                 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
                 `)
-            game.showLongText("Who is the Imposter?", DialogLayout.Top)
             myEnemy2.setPosition(80, 100)
             myButton.setPosition(25, 35)
-            mySprite2.follow(mySprite, 10000000000000000)
+            game.showLongText("Who is the Imposter?", DialogLayout.Top)
         }
     }
 })
@@ -346,7 +345,6 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.menu.onEvent(ControllerButtonEvent.Pressed, function () {
     game.reset()
 })
-let mySprite2: Sprite = null
 let myEnemy2: Sprite = null
 let myEnemy: Sprite = null
 let mySprite: Sprite = null
@@ -546,8 +544,8 @@ myEnemy2 = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
-mySprite2 = sprites.create(img`
+    `, SpriteKind.Enemy)
+let mySprite2 = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
